@@ -2,13 +2,14 @@ import {
   Github,
   Linkedin,
   MessageCircle,
-  Radio,
-  Twitter,
-  Users,
+  Send,
+  TrendingUp,
+  X,
   Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Stats are hardcoded and need periodic manual updates as the community grows.
 const platforms = [
   {
     name: "کانال تلگرام",
@@ -17,7 +18,7 @@ const platforms = [
     stat: "+۷۱۰۰ مشترک",
     cta: "دنبال کردن کانال",
     href: "https://t.me/techimmigrantschannel",
-    icon: Radio,
+    icon: Send,
     tone: "bg-sky-500/10 text-sky-600",
     buttonVariant: "default" as const,
   },
@@ -36,7 +37,7 @@ const platforms = [
     name: "یوتیوب",
     description:
       "مصاحبه‌ها، لایوها و گفتگوهای عمیق درباره مهاجرت کاری و مسیر رشد در صنعت تک.",
-    stat: "+۱۹۰ اپیزود",
+    stat: "+۱۰۰۰۰ سابسکرایبر",
     cta: "سابسکرایب",
     href: "https://youtube.com/@techimmigrants",
     icon: Youtube,
@@ -47,9 +48,9 @@ const platforms = [
     name: "لینکدین",
     description:
       "برای ارتباط حرفه‌ای، خبرهای جامعه و نوشته‌های مرتبط با مسیر شغلی در تک همراه باشید.",
-    stat: "Follow",
+    stat: "+۹۰۰۰ فالوور",
     cta: "دنبال کردن",
-    href: "https://linkedin.com/in/saharpak",
+    href: "https://linkedin.com/company/techimmigrants",
     icon: Linkedin,
     tone: "bg-blue-600/10 text-blue-600",
     buttonVariant: "outline" as const,
@@ -58,10 +59,10 @@ const platforms = [
     name: "X / Twitter",
     description:
       "نکته‌های کوتاه، به‌روزرسانی‌ها و گفتگوهای روزمره جامعه Tech Immigrants را دنبال کنید.",
-    stat: "Follow",
+    stat: "+۱۰۰۰۰ فالوور",
     cta: "دنبال کردن",
-    href: "https://x.com/saharlead",
-    icon: Twitter,
+    href: "https://x.com/techimmigrants",
+    icon: X,
     tone: "bg-foreground/10 text-foreground",
     buttonVariant: "outline" as const,
   },
@@ -69,7 +70,7 @@ const platforms = [
     name: "GitHub",
     description:
       "پروژه‌های متن‌باز جامعه را ببینید، مشارکت کنید و ایده‌های جدید را با ما بسازید.",
-    stat: "۱۰ مخزن، مشارکت کنید",
+    stat: "۱۰ مخزن",
     cta: "مشاهده GitHub",
     href: "https://github.com/TechImmigrants",
     icon: Github,
@@ -110,7 +111,7 @@ export function CommunitySection() {
                   {platform.description}
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-5">
-                  <Users className="h-4 w-4" />
+                  <TrendingUp className="h-4 w-4" />
                   <span>{platform.stat}</span>
                 </div>
                 <Button
